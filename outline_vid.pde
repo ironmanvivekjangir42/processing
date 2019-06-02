@@ -29,7 +29,7 @@ void draw() {
       gy=(1*getcol(loc-1-width))+(0*getcol(loc-1))+(-1*getcol(loc-1+width))+(2*getcol(loc-width))+(0*getcol(loc))+(-2*getcol(loc+width))+(1*getcol(loc+1-width))+(0*getcol(loc+1))+(-1*getcol(loc+1+width));
       //combine both vertical and horizontal edges
       col=int(sqrt((gx*gx)+(gy*gy)));
-      pixels[loc]=color(gx*2,gx*2,0);//display the new pixel we created
+      pixels[loc]=color(gx*2,gx*2,col/2);//display vertical edges with red,horizontal edges with green and add a blue to all edges
     }
   }
   updatePixels();
